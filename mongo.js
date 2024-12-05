@@ -12,13 +12,6 @@ const url = `mongodb+srv://Jc4rlos:${password}@cluster0.hhh4g.mongodb.net/?retry
 mongoose.set('strictQuery', false);
 
 mongoose.connect(url)
-  .then(() => {
-    console.log('Haz sido conecctado an MongoDB');
-  })
-  .catch((err) => {
-    console.error('Error conectándose a MongoDB:', err.message);
-    process.exit(1);
-  });
 
 const personSchema = new mongoose.Schema({
   name: String,
